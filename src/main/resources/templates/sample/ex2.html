@@ -29,6 +29,10 @@
         <th:block th:each="dto: ${list}">
             <li th:text="${dto.sno % 5 == 0}?${dto.sno}:${dto.first}"></li>
         </th:block>
+
+        <li th:each="dto : ${list}">
+            [[${#numbers.formatInteger(dto.sno,5)}]]
+        </li>
     </ul>
 </body>
 </html>
